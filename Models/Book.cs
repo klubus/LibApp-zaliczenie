@@ -9,17 +9,20 @@ namespace LibApp.Models
     public class Book
     {
         public int Id { get; set; }
-		[Required]
+		[Required(ErrorMessage = "Name is required")]
 		[StringLength(255)]
 		public string Name { get; set; }
-		[Required]
+		[Required(ErrorMessage = "AuthorName is required")]
 		public string AuthorName { get; set; }
-		[Required]
+		[Required(ErrorMessage = "Genre is required")]
 		public Genre Genre { get; set; }
 		public byte GenreId { get; set; }
 		public DateTime DateAdded { get; set; }
+		[Required(ErrorMessage = "ReleaseDate is required")]
 		public DateTime ReleaseDate { get; set; }
+		[Required(ErrorMessage = "NumberInStock is required")]
 		public int NumberInStock { get; set; }
+		[Required(ErrorMessage = "NumberAvailable is required")]
 		public int NumberAvailable { get; set; }
 	}
       
